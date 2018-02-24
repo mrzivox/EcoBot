@@ -18,6 +18,7 @@ const prefix = "/";
   bot.on('guildMemberAdd', member => {
     member.createDM().then(channel => {
       return channel.send('Bienvenue ' + member.displayName +  'je suis EcoBot je suis le robot de se serveur')
+      member.addRole("name", "Citoyens"
     }).catch(console.error)
   })
 
