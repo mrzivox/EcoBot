@@ -8,6 +8,7 @@ const prefix = "/";
 
 
 // Var ////////////////////////////////////////////////////////////
+var role = member.guild.roles.find('name', 'Citoyen');
 
 ///////////////////////////////////////////////////////////////////
 
@@ -15,13 +16,12 @@ const prefix = "/";
   
 //////Welcome/Bye///////////////////////////////////////////////  
   
-  bot.on('guildMemberAdd', member => {
-    let role = member.guild.roles.fin("name", "Citoyens");
-     member.addRole(role)
-    member.createDM().then(channel => {
-      return channel.send('Bienvenue ' + member.displayName +  'je suis EcoBot je suis le robot de se serveur')
-    }).catch(console.error)
-  })
+bot.on('guildMemberAdd', member => {
+  member.createDM().then(channel => {
+    return channel.send('Bienvenue ' + member.displayName +  'je suis EcoBot je suis le robot de se serveur')
+    member.addRole(role)
+  }).catch(console.error);
+});
 
 
 //////Test///////////////////////////////////////////////////////////  
@@ -100,3 +100,4 @@ return message.edit("**Pong :ping_pong: = " + Math.round(endTime - startTime) + 
 //////////////////////////////////////////////////////////////////
 
 bot.login(process.env.TOKEN);
+
