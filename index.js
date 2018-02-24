@@ -57,14 +57,6 @@ const prefix = "/";
     
     ///help///////////////////////////////////////////////////////////  
     
-    bot.on('message', message => {
-      if (message.content.startsWith(prefix + "staffhelp")) {
-      var help_embed = new Discord.RichEmbed()
-        .setColor('#00FEC3')
-        .addField("**Commandes Principales Staff :**", "**/ban : Permet de bannir un membre .\n/kick : Permet de kick un membre .**")
-        message.channel.sendEmbed(help_embed)}});
-        var help_embed = new Discord.RichEmbed();
-    
     
     bot.on('message', message => {
     if (message.content.startsWith(prefix + "help")) {
