@@ -9,12 +9,20 @@ const prefix = "/";
 
 // Var ////////////////////////////////////////////////////////////
 
+///////////////////////////////////////////////////////////////////
+
 
   
-  //////////////////////////////////////////////////////////////////  
+//////Welcome/Bye///////////////////////////////////////////////  
   
-    
-  
+  bot.on('guildMemberAdd', member => {
+    member.createDM().then(channel => {
+      return channel.send('Bienvenue ' + member.displayName +  'je suis EcoBot je suis le robot de se serveur')
+    }).catch(console.error)
+  })
+
+
+//////Test///////////////////////////////////////////////////////////  
   
   bot.on('message', message => {
   if (message.content.startsWith(prefix + "test")) {
@@ -28,7 +36,7 @@ const prefix = "/";
   
   bot.on('message', message => {
   if (message.content.startsWith(prefix + "bonjour")) {
-    message.channel.send('**Bonjour**' );}});
+    message.channel.send('**Bonjour**');}});
   
   
   //////////////////////////////////////////////////////////////////  
@@ -46,7 +54,7 @@ const prefix = "/";
     if (message.content.startsWith(prefix + "info")) {
     var info_embed = new Discord.RichEmbed()
       .setColor('#00FEC3')
-      .addField("Information Sur le Bot :" , "**Développeur : MrZivox\nVersion : 1.0**")
+      .addField("Information Sur le Bot :" , "**Développeur : MrZivox\nVersion : 1.1**")
       .addField("Actualités :", "**Aucune Actualités**")
       message.channel.sendEmbed(info_embed)}});
       var help_embed = new Discord.RichEmbed();
@@ -56,6 +64,7 @@ const prefix = "/";
     
     
     ///help///////////////////////////////////////////////////////////  
+    
     
     
     bot.on('message', message => {
@@ -69,12 +78,7 @@ const prefix = "/";
     
     //////////////////////////////////////////////////////////////////
     
-    bot.on('message', message => {
-    if (message.content.startsWith(prefix + "version")) {
-    message.channel.send('**Version 1.0**');}});
-    
-    
-    
+
     
     ///////////////////////////////////////////////////////////////////
 
@@ -90,8 +94,7 @@ return message.edit("**Pong :ping_pong: = " + Math.round(endTime - startTime) + 
 }});
 
 
+
 //////////////////////////////////////////////////////////////////
 
 bot.login(process.env.TOKEN);
-
-
