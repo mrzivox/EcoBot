@@ -71,7 +71,7 @@ const prefix = "/";
     var help_embed = new Discord.RichEmbed()
       .setColor('#00FEC3')
       .addField("**Commandes Principales :**", "**/help : Affiche les commandes du bot .\n/info : Affiche des informations sur le bot .\n**")
-      .addField("**Commandes d'Interaction :**", "**/bonjour : permet de dire bonjour à ZivoxBot .\n/aurevoir : permet de dire au revoir à ZivoxBot .**")
+      .addField("**Commandes d'Interaction :**", "**/bonjour : permet de dire bonjour à EcoBot .\n/aurevoir : permet de dire au revoir à EcoBot .**")
       message.channel.sendEmbed(help_embed)}});
       var help_embed = new Discord.RichEmbed();
     
