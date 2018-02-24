@@ -8,7 +8,7 @@ const prefix = "/";
 
 
 // Var ////////////////////////////////////////////////////////////
-var role = Member.guild.roles.find('name', 'Citoyen');
+
 
 ///////////////////////////////////////////////////////////////////
 
@@ -19,9 +19,8 @@ var role = Member.guild.roles.find('name', 'Citoyen');
 bot.on('guildMemberAdd', member => {
   member.createDM().then(channel => {
     return channel.send('Bienvenue ' + member.displayName +  'je suis EcoBot je suis le robot de se serveur')
-    member.addRole(role)
   }).catch(console.error);
-});
+})
 
 
 //////Test///////////////////////////////////////////////////////////  
